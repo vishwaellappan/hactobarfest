@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reposcout"
+version = "0.1.0"
+description = "Evidence-first repository mapping and beginner-friendly contribution planning"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "RepoScout contributors" }]
+keywords = ["repository", "code-search", "bm25", "contributing", "agent", "static-analysis"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Quality Assurance",
+  "Topic :: Software Development :: Documentation",
+]
+dependencies = []
+
+[project.scripts]
+reposcout = "reposcout.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/example/reposcout"
+
+[tool.setuptools.packages.find]
+include = ["reposcout*"]
